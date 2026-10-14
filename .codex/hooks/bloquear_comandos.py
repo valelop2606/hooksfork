@@ -6,7 +6,6 @@ import json
 import re
 import sys
 from pathlib import Path
-from pathlib import Path
 
 sys.stderr.reconfigure(encoding="utf-8")
 
@@ -34,9 +33,6 @@ for patron, motivo in PELIGROSOS.items():
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "hooks"))
 from verificar_push import verificar_push
 
-verificar_push(comando)
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "hooks"))
-from verificar_push import verificar_push
 
 verificar_push(comando)
 sys.exit(0)
